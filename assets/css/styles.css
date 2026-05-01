@@ -199,11 +199,11 @@ p { max-width: 60ch; }
 .nav a.active { color: var(--text); font-weight: 600; }
 
 .header__cta {
-  margin-left: auto;
+  display: none;
   flex-shrink: 0;
   white-space: nowrap;
 }
-@media (min-width: 768px) { .header__cta { margin-left: 0; } }
+@media (min-width: 768px) { .header__cta { display: inline-flex; margin-left: 0; } }
 
 /* Hamburger */
 .hamburger {
