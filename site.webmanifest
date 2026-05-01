@@ -1,15 +1,15 @@
 {
   "name": "Paradise Auto Detailing",
-  "short_name": "PAD",
+  "short_name": "PASD",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0a0f16",
   "theme_color": "#111827",
   "icons": [
     {
-      "src": "assets/icons/favicon.svg",
+      "src": "assets/icons/favicon.png",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/png"
     }
   ]
 }
