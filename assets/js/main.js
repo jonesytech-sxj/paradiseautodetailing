@@ -1,5 +1,18 @@
 /* Paradise Auto Detailing — main.js */
 
+/* --- Frame protection for hosts that can't set X-Frame headers --- */
+/* Attempts to break out of top-level framing. This is a best-effort
+   fallback for GitHub Pages where server response headers can't be set. */
+(function frameBreaker(){
+  try {
+    if (window.self !== window.top) {
+      window.top.location.replace(window.location.href);
+    }
+  } catch (e) {
+    // Cross-origin frame — we can't access top; silently ignore.
+  }
+})();
+
 /* --- Mobile nav toggle ------------------------------------- */
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
