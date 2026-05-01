@@ -1,0 +1,31 @@
+/*
+  # Deny framing entirely — prevents clickjacking attacks
+  X-Frame-Options: DENY
+
+  # Prevent MIME-type sniffing — stops browsers guessing file types
+  X-Content-Type-Options: nosniff
+
+  # Control how much referrer info leaves the site when following links
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Enforce HTTPS for 1 year, include subdomains, eligible for preload list
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Isolate this page's browsing context — prevents cross-origin attacks via window.opener
+  Cross-Origin-Opener-Policy: same-origin
+
+  # Restrict cross-origin resource sharing — assets served only to same-origin requests
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Disable browser features this site does not use
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), autoplay=(), interest-cohort=()
+
+  # Content Security Policy — locks down exactly what the browser is allowed to load
+  # This site is fully self-hosted: no CDN, no external fonts, no external scripts.
+  # script-src 'self'  — only /assets/js/main.js, no inline scripts
+  # style-src  'self'  — only /assets/css/styles.css, no inline styles
+  # img-src    'self'  — only /assets/img/, no external images
+  # frame-ancestors 'none' — equivalent to X-Frame-Options: DENY but stronger
+  # form-action 'self'     — no forms exist, but restricts if any are added later
+  # upgrade-insecure-requests — auto-upgrade any accidental http:// sub-resource requests
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests

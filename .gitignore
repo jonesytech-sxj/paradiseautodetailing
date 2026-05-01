@@ -1,0 +1,73 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Local environment and secrets
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+
+# Wrangler / Cloudflare local state
+.wrangler/
+wrangler/.dev.vars
+
+# Backups and temporary files
+*.bak
+*.backup
+*.tmp
+*.temp
+*.old
+*.orig
+*~
+
+# Archives and database dumps
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+*.sql
+*.sqlite
+*.db
+
+# Large/source media that should not be public by accident
+assets/img/raw/
+assets/img/private/
+assets/img/source/
+assets/img/customer-private/
+
+# Local notes that should not deploy
+LOCAL-NOTES.md
+scratch/
+tmp/
+
+# Backups of recently edited files
+*.bak
+
+docs/

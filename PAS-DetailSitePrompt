@@ -1,0 +1,408 @@
+Project: Rebuild Paradise Auto Detailing Website as Lightweight Static HTML/CSS/JS Site
+
+Current site:
+https://pas-detailing.com/
+
+Goal:
+Rebuild the existing WordPress website into a lightweight, fast, responsive, mobile-first HTML/CSS/JavaScript website for Paradise Auto Detailing. The finished site should be simple to maintain, quick to load, easy to host, and structured around the detailing service catalog, booking workflow, invoicing flow, customer intake expectations, Instagram gallery, and Google review visibility.
+
+The site should not depend on WordPress, page builders, heavy frontend frameworks, or unnecessary JavaScript libraries. Build with semantic HTML, modern CSS, and minimal vanilla JavaScript unless there is a strong reason to use a build tool.
+
+Primary Business Goals:
+1. Present Paradise Auto Detailing’s service packages clearly.
+2. Make it easy for customers to choose a package or request a quote.
+3. Support Square Appointments as the likely booking/invoicing hook.
+4. Provide clear policy/service terms around pricing, requotes, biohazard limitations, deposits, cancellations, and customer responsibilities.
+5. Embed Instagram content as a visual gallery and encourage users to follow Paradise Auto Detailing.
+6. Add Google Reviews visibility or a low-maintenance reviews section.
+7. Make the site extremely mobile-friendly for customers browsing from phones.
+
+Design Requirements:
+- Mobile-first layout.
+- Fast load times.
+- Clean, premium auto-detailing aesthetic.
+- Strong calls to action: Book Now, Text Us, Call Us, Request Quote, Follow on Instagram.
+- Avoid clutter.
+- Use service cards, comparison tables, and collapsible FAQ sections.
+- Keep content easy to scan on mobile.
+- Use compressed images and modern formats where possible.
+- Use accessible contrast, readable font sizes, and large tap targets.
+- Use semantic HTML landmarks: header, nav, main, section, footer.
+- Include alt text for all meaningful images.
+- Use no tracking scripts unless specifically approved by the client.
+
+Suggested Site Structure:
+- Home
+- Services
+- Gallery
+- Reviews
+- Booking / Request Quote
+- FAQ
+- Policies / Terms
+- Contact
+
+Alternative: this can be a single-page site with anchored sections if that is more appropriate:
+- Hero
+- Why Paradise Auto Detailing
+- Services
+- Add-ons
+- Biohazard Service
+- Booking Process
+- Gallery / Instagram
+- Reviews
+- FAQ
+- Policies
+- Contact / Footer
+
+Homepage Requirements:
+Hero section should include:
+- Business name: Paradise Auto Detailing
+- Short value proposition
+- Primary CTA: Book Now
+- Secondary CTA: Text / Call / Request Quote
+- Service area if available
+- One strong image or video-style visual if available
+
+Suggested hero copy direction:
+“Premium mobile auto detailing with clear packages, professional service, and easy booking.”
+
+Services Section:
+Rebuild the service catalog into a customer-friendly structure.
+
+Core Packages:
+1. Diamond Full Package — $750
+   Position as premium full-service package.
+   Includes Gold+ level service with:
+   - Pet hair
+   - Headliner cleaning
+   - Ozone treatment for bacterial odor removal
+   - Paint enhancement: light polish with sealant, estimated 1–2 hours
+
+2. Gold Full Package — $500
+   Includes:
+   Gold Interior Detail — $300
+   - Vacuum
+   - Wipe down all surfaces
+   - Dress interior surfaces
+   - Clean glass
+   - Clean floor mats
+   - Shampoo carpets and upholstery
+
+   Gold Exterior Detail — $275
+   - Hand wash
+   - Clean front of wheels/tires
+   - Tire dressing
+   - Clean wheel/fender wells
+   - Wax treatment
+   - Clay bar treatment
+   - Decontamination for grime, water spots, tar, sap, etc.
+   - 6-month sealant
+
+3. Silver Full Package — $400
+   Includes:
+   Silver Interior Detail — $250
+   - Vacuum
+   - Wipe down all surfaces
+   - Dress interior surfaces
+   - Stain or spot removal/reduction
+   - Clean glass
+   - Clean floor mats
+
+   Silver Exterior Detail — $200
+   - Hand wash
+   - Clean front of wheels/tires
+   - Tire dressing
+   - Clean wheel/fender wells
+   - Wax treatment
+
+4. Standard Full Package — $250
+   Time-limited bundle, 3 hours.
+   Includes:
+   Standard Interior Detail — $200, time-limited to 2 hours
+   - Vacuum
+   - Wipe down all surfaces
+   - Clean glass
+   - Clean floor mats
+
+   Standard Exterior Detail — $150, time-limited to 2 hours
+   - Hand wash
+   - Clean front of wheels/tires
+   - Tire dressing
+
+5. Biohazard Full Package — starting at $600
+   Position this as consultation-based.
+   Use careful wording:
+   - Biohazard cleaning requires consultation.
+   - Pricing depends on vehicle condition, contamination severity, and vehicle size.
+   - If biohazard conditions are found, Paradise Auto Detailing will assess and requote before work continues.
+   - The best value may be upgrading to at least Gold because biohazard service includes ozone treatment for bacterial odor removal.
+   - The business handles certain bodily fluids, vomit, and other hazardous materials from humans or animals when safe and appropriate.
+   - The business does not handle blood, disease-related contamination, body parts, drug-related materials, or any contamination that creates significant health risk to staff or customers.
+
+Service Presentation Requirements:
+- Use package cards for Diamond, Gold, Silver, Standard, and Biohazard.
+- Make prices visually obvious.
+- Show “Full Package,” “Interior Only,” and “Exterior Only” options where applicable.
+- Include “starting at” language where needed.
+- Include “time-limited” language for Standard services.
+- Use expandable details on mobile so the page does not become overwhelming.
+- Add “Book this package” or “Request quote” buttons on each package card.
+- Buttons should either link to Square Appointments, a request form, phone, text, or email depending on final business setup.
+
+Service Catalog / Invoice Mapping:
+Build the page content so it can align with Square Appointments or another booking/invoice system.
+
+Recommended invoice/service item names:
+- Diamond Full Detail Package
+- Gold Interior + Exterior Detail
+- Gold Interior Detail
+- Gold Exterior Detail
+- Silver Interior + Exterior Detail
+- Silver Interior Detail
+- Silver Exterior Detail
+- Standard Detail Bundle
+- Standard Interior Detail
+- Standard Exterior Detail
+- Biohazard Assessment / Consultation
+- Biohazard Cleaning Service
+- Pet Hair Removal Add-On
+- Headliner Cleaning Add-On
+- Ozone Treatment Add-On
+- Paint Enhancement Add-On
+- Exterior Decontamination Add-On
+- Mobile Service Fee, if needed
+
+Booking / Invoicing Integration:
+Assume Square Appointments is the preferred booking and invoice/payment tool. Square Appointments is a good fit because it can support appointments, service catalog, payments, and invoices from one business workflow. Square currently advertises free starting options and no long-term contract positioning, with payment processing fees applying when payments are processed electronically. Use Square as the first implementation option if the client accepts it.
+
+Square integration requirements:
+- Add “Book Now” button linking to the Square Appointments booking page.
+- Add package-level booking links if Square supports individual service URLs.
+- Add “Request Quote” fallback for complex services like Biohazard, Diamond, or heavy-condition vehicles.
+- Add website copy explaining that final pricing may be adjusted after vehicle inspection if additional work is required.
+- Add invoice/payment language in policies.
+
+Low-cost alternatives worth considering:
+1. Setmore
+   - Good for simple online booking.
+   - Free plan is currently positioned around online scheduling, automated booking, reminders, payments, and mobile apps.
+   - Good if the client wants a very simple booking page and does not need Square’s POS/invoice ecosystem.
+2. Zoho Bookings + Zoho Invoice
+   - Better if the client wants more back-office structure.
+   - May be more administrative than Square or Setmore.
+3. Calendly
+   - Useful for consultations, but less ideal for service packages, mobile detailing, deposits, and invoice workflows.
+4. TidyCal
+   - Very lightweight scheduling option, but not as strong for field-service invoicing.
+
+Recommendation:
+Use Square Appointments first unless the client dislikes Square. Use Setmore as the simplest low-cost backup. Avoid building custom booking/invoicing logic into the static website at this stage.
+
+Booking Flow Section:
+Add a short customer-facing section explaining the process:
+1. Choose a package or request a quote.
+2. Confirm vehicle type, condition, location, and add-ons.
+3. Book the appointment.
+4. Receive confirmation.
+5. Vehicle is inspected before work begins.
+6. If additional work is needed, the customer receives an updated quote before continuing.
+7. Service is completed.
+8. Invoice/payment is completed.
+9. Receipt and follow-up are sent.
+
+Customer Prep Section:
+Add a concise section:
+- Remove personal belongings before the appointment.
+- Make sure the vehicle is accessible.
+- Disclose pet hair, stains, odors, spills, or biohazard concerns before appointment.
+- For mobile service, ensure there is enough space to work.
+- If water/power access is required, note this clearly if applicable.
+
+Gallery / Instagram:
+Add an Instagram gallery section.
+Requirements:
+- Embed Instagram content or profile if technically feasible.
+- Use official Instagram embed where possible. Instagram allows public posts, reels, guides, or profiles to be embedded on websites when the account is public.
+- If a full feed embed is needed, evaluate a lightweight third-party widget, but avoid heavy scripts if possible.
+- Include CTA: “Follow Paradise Auto Detailing on Instagram.”
+- Include Instagram icon/link.
+- If embeds are slow, use a fallback: manually curated gallery grid with compressed local images and a CTA linking to Instagram.
+
+Suggested copy:
+“See recent details, before-and-after shots, and finished work on Instagram. Follow Paradise Auto Detailing for updates, transformations, and openings.”
+
+Google Reviews:
+Add a Reviews section.
+Requirements:
+- Prefer a simple link/button to the Google Business Profile reviews page if embed complexity, API restrictions, or widget cost is an issue.
+- If the client approves a third-party reviews widget, implement a lightweight one with minimal scripts.
+- Include a CTA: “Read our Google Reviews” and “Leave a Review.”
+- If using manually selected testimonials, make sure the client provides the exact review text and permission/attribution guidance.
+
+Do not scrape Google Reviews manually. Use an approved embed/widget, Google Business Profile link, or manually approved testimonials provided by the client.
+
+Policy / Terms Section:
+Create a lightweight policies page or policy accordion.
+
+Minimal policy documents/content sections:
+1. Service Terms & Scope
+2. Booking, Cancellation & Customer Responsibilities
+3. Biohazard & Contamination Policy
+4. Payment, Invoicing & Issue Resolution
+5. Privacy & Media Use
+
+Policy content should be written in plain language and tied to the booking/invoice process.
+
+Key policy language to include:
+- Final pricing may vary based on vehicle size, condition, contamination, pet hair, stains, odor, and requested add-ons.
+- If additional work is required, the customer will receive an updated estimate before additional work continues.
+- Biohazard cleaning requires consultation and may be declined if unsafe.
+- Customers should remove personal items before service.
+- Paradise Auto Detailing is not responsible for unsecured personal belongings left in the vehicle.
+- Ozone treatment may reduce odors but does not guarantee permanent odor removal.
+- Paint enhancement is a light polish/sealant service and is not full paint correction.
+- Payment is due upon completion unless otherwise agreed.
+- Deposits may be required for certain services.
+- Customers should report service concerns within a defined window, such as 24–48 hours.
+- Before/after photos may be used for gallery/social media only with appropriate customer consent and without exposing personal information such as license plates.
+
+Contact Section:
+Include:
+- Phone
+- Text CTA
+- Email
+- Instagram
+- Google Business Profile link
+- Service area
+- Hours if available
+- Booking button
+
+Technical Requirements:
+- Static HTML/CSS/JS.
+- No WordPress.
+- No database.
+- No backend unless explicitly approved.
+- Mobile-first CSS.
+- Use CSS variables for theme colors, spacing, and typography.
+- Use responsive grids.
+- Use accessible accordions if using collapsible content.
+- Lazy-load images and embeds.
+- Compress images.
+- Avoid heavy animation.
+- Avoid layout shift.
+- Use schema.org LocalBusiness or AutoRepair/AutomotiveBusiness structured data if appropriate.
+- Include Open Graph metadata for social sharing.
+- Include favicon and mobile icons.
+- Include sitemap.xml and robots.txt.
+- Include basic SEO metadata per page.
+- Include accessible form labels if forms are used.
+- If contact form is needed, use a simple third-party form endpoint or mailto/text fallback unless client approves backend hosting.
+
+Performance Targets:
+- Lighthouse Performance target: 90+
+- Accessibility target: 90+
+- Best Practices target: 90+
+- SEO target: 90+
+- Keep initial JS minimal.
+- Do not load Instagram or Google review scripts until near viewport if possible.
+- Provide local image fallback if embeds slow page load.
+
+Suggested File Structure:
+/
+  index.html
+  services.html
+  policies.html
+  contact.html
+  /assets
+    /css
+      styles.css
+    /js
+      main.js
+    /img
+      hero.webp
+      gallery/
+    /icons
+  robots.txt
+  sitemap.xml
+
+If single-page:
+/
+  index.html
+  /assets/css/styles.css
+  /assets/js/main.js
+  /assets/img/
+  robots.txt
+  sitemap.xml
+
+JavaScript Requirements:
+- Mobile navigation toggle.
+- Smooth scrolling for anchor links.
+- Accessible accordion behavior for FAQ/service details.
+- Optional: lazy-load embeds.
+- Optional: simple package filter/tabs for Full Package / Interior / Exterior / Add-ons.
+- No unnecessary dependencies.
+
+CSS Requirements:
+- Use modern CSS: flexbox/grid, clamp(), custom properties.
+- Build for small screens first.
+- Use large touch-friendly buttons.
+- Service cards should be visually distinct but not cluttered.
+- Use sticky mobile CTA if appropriate, such as Book Now / Text Us.
+- Make pricing and “starting at” language easy to see.
+
+SEO Requirements:
+- Preserve or improve current SEO-relevant content from the WordPress site where appropriate.
+- Add page titles and descriptions.
+- Add local SEO terms naturally: auto detailing, mobile detailing, interior detail, exterior detail, vehicle detailing, service area.
+- Add structured data for business name, services, phone, URL, social profile, and reviews link if appropriate.
+- Ensure images have descriptive filenames and alt text.
+
+Deliverables:
+1. Static website files.
+2. Clean service catalog section.
+3. Booking CTA integration with Square Appointments or selected alternative.
+4. Instagram gallery/follow section.
+5. Google Reviews section or approved review link/widget.
+6. Policies/terms section/page.
+7. Mobile-responsive design.
+8. Basic SEO metadata.
+9. Deployment-ready folder.
+10. Short handoff document explaining how to update:
+   - service prices
+   - booking links
+   - Instagram link/embed
+   - Google Reviews link
+   - gallery images
+   - policy language
+
+Implementation Notes:
+- Start by auditing the current WordPress website and preserving any useful copy, branding, images, logo, color palette, contact information, and SEO-relevant structure.
+- Reorganize the services based on the package structure provided above.
+- Build a fast static version first.
+- Do not over-engineer booking, invoicing, or reviews. Link out to Square/Setmore/Google where possible.
+- Keep the website easy for a non-technical business owner to understand and update.
+
+## Paradise Auto Detailing Cloudflare Context
+
+This site uses Cloudflare for security, deployment, and Workers.
+
+Assume Cloudflare Pages or Workers may serve the production site.
+
+Security implementation should prefer Cloudflare-native features:
+
+- Cloudflare Pages deployment
+- Cloudflare Workers for contact/quote form handling
+- Cloudflare Turnstile for spam protection
+- Cloudflare WAF for basic abuse protection
+- Cloudflare DNS and TLS settings
+- Cloudflare Redirect Rules or `_redirects`
+- `_headers` for static Pages responses
+- Worker response headers for Worker-generated responses
+
+Do not add a traditional backend server unless explicitly requested.
+
+Do not collect payment card information in custom forms.
+
+Use Square or another payment provider for payment workflows.
+
+Protect public forms with server-side Turnstile validation in the Worker.

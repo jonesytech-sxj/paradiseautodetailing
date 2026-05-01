@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="540" viewBox="0 0 720 540" role="img" aria-labelledby="title desc">
+  <title id="title">Interior detailing illustration</title>
+  <desc id="desc">A stylized interior dashboard and seating scene representing interior detailing.</desc>
+  <rect width="720" height="540" rx="32" fill="#101723"/>
+  <rect x="56" y="72" width="608" height="396" rx="28" fill="#1f2937" stroke="#334155" stroke-width="4"/>
+  <path d="M132 168H588V228H132Z" fill="#0f172a"/>
+  <circle cx="206" cy="198" r="34" fill="#f97316" fill-opacity="0.85"/>
+  <rect x="312" y="186" width="120" height="24" rx="12" fill="#cbd5e1" fill-opacity="0.8"/>
+  <rect x="458" y="180" width="94" height="36" rx="18" fill="#475569"/>
+  <rect x="166" y="266" width="140" height="146" rx="26" fill="#0b1220"/>
+  <rect x="414" y="266" width="140" height="146" rx="26" fill="#0b1220"/>
+  <path d="M148 438H572" stroke="#f97316" stroke-width="8" stroke-linecap="round"/>
+  <text x="68" y="484" fill="#f8fafc" font-family="Bahnschrift, Franklin Gothic Medium, Trebuchet MS, sans-serif" font-size="28" letter-spacing="4">INTERIOR DETAIL</text>
+</svg>
