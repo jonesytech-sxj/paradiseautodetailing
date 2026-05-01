@@ -70,4 +70,7 @@ tmp/
 # Backups of recently edited files
 *.bak
 
+## Docs Folder
 docs/
+
+.github/
