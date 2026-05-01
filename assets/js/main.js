@@ -1,4 +1,4 @@
-/* Paradise Auto Detailing — main.js */
+/* Paradise Auto Detailing | main.js */
 
 /* --- Frame protection for hosts that can't set X-Frame headers --- */
 /* Attempts to break out of top-level framing. This is a best-effort
@@ -9,7 +9,7 @@
       window.top.location.replace(window.location.href);
     }
   } catch (e) {
-    // Cross-origin frame — we can't access top; silently ignore.
+    // Cross-origin frame; we can't access top. Silently ignore.
   }
 })();
 
