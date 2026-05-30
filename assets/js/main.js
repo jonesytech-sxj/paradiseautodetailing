@@ -13,6 +13,8 @@
   }
 })();
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /* --- Mobile nav toggle ------------------------------------- */
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -28,6 +30,22 @@ if (hamburger && mobileMenu) {
     link.addEventListener('click', () => {
       hamburger.setAttribute('aria-expanded', 'false');
       mobileMenu.hidden = true;
+    });
+  });
+}
+
+/* --- Scroll-to-top logo links ------------------------------ */
+const scrollTopLinks = document.querySelectorAll('[data-scroll-top]');
+
+if (scrollTopLinks.length) {
+  scrollTopLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
     });
   });
 }
@@ -118,8 +136,6 @@ if (gallery) {
 }
 
 /* --- Scroll-reveal animation ------------------------------- */
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 if (!prefersReducedMotion) {
   const revealSelectors = [
     '.section__head',
