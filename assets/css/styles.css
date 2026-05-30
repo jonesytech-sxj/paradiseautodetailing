@@ -863,7 +863,7 @@ p { max-width: 60ch; }
 .comparison-slider__after {
   position: absolute;
   inset: 0;
-  clip-path: inset(0 calc(100% - var(--comparison-position)) 0 0);
+  clip-path: inset(0 0 0 var(--comparison-position));
 }
 
 .comparison-slider__label {
