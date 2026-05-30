@@ -50,6 +50,73 @@ if (sections.length && navLinks.length) {
   sections.forEach(s => navObserver.observe(s));
 }
 
+/* --- Gallery comparison viewer ---------------------------- */
+const gallery = document.querySelector('[data-gallery]');
+
+if (gallery) {
+  const slider = gallery.querySelector('[data-gallery-slider]');
+  const beforeImage = gallery.querySelector('[data-gallery-before]');
+  const afterImage = gallery.querySelector('[data-gallery-after]');
+  const range = gallery.querySelector('[data-gallery-range]');
+  const title = gallery.querySelector('[data-gallery-title]');
+  const description = gallery.querySelector('[data-gallery-description]');
+  const mode = gallery.querySelector('[data-gallery-mode]');
+  const hint = gallery.querySelector('[data-gallery-hint]');
+  const items = Array.from(gallery.querySelectorAll('[data-gallery-item]'));
+
+  if (slider && beforeImage && afterImage && range && title && description && mode && hint && items.length) {
+    const setSliderPosition = (value) => {
+      slider.style.setProperty('--comparison-position', `${value}%`);
+    };
+
+    const setActiveItem = (item) => {
+      const hasComparison = Boolean(item.dataset.before && item.dataset.after);
+
+      gallery.dataset.mode = hasComparison ? 'comparison' : 'single';
+      title.textContent = item.dataset.title || '';
+      description.textContent = item.dataset.description || '';
+      mode.textContent = item.dataset.tag || (hasComparison ? 'Before / After' : 'Result');
+
+      if (hasComparison) {
+        const sliderPosition = item.dataset.position || '50';
+
+        beforeImage.src = item.dataset.before;
+        beforeImage.alt = item.dataset.beforeAlt || '';
+        afterImage.src = item.dataset.after;
+        afterImage.alt = item.dataset.afterAlt || '';
+        range.value = sliderPosition;
+        setSliderPosition(sliderPosition);
+        hint.textContent = 'Drag the handle left or right to compare the result.';
+      } else {
+        beforeImage.src = item.dataset.result || '';
+        beforeImage.alt = item.dataset.resultAlt || '';
+        range.value = '100';
+        setSliderPosition(100);
+        hint.textContent = 'Single result photo from a completed detail.';
+      }
+
+      items.forEach(button => {
+        const isActive = button === item;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+    };
+
+    range.addEventListener('input', (event) => {
+      setSliderPosition(event.target.value);
+    });
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        setActiveItem(item);
+      });
+    });
+
+    const initialItem = gallery.querySelector('[data-active]') || items[0];
+    setActiveItem(initialItem);
+  }
+}
+
 /* --- Scroll-reveal animation ------------------------------- */
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -58,7 +125,8 @@ if (!prefersReducedMotion) {
     '.section__head',
     '.package',
     '.step',
-    '.gallery__item',
+    '.gallery__feature',
+    '.gallery__thumb',
     '.contact-card',
     '.extras',
     '.pricing-note',
